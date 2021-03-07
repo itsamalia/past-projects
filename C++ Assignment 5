@@ -1,0 +1,39 @@
+// Amalia Talijancic
+// Assignment #5
+// 02/24/2021
+
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+double firstNumber;
+double secondNumber;
+
+int main()
+{
+	cout << "A5 - Minimum/Maximum";
+	
+	cout << "\n\nPlease enter a number: ";
+	cin >> firstNumber;
+
+	cout << "\nPlease enter a second number: ";
+	cin >> secondNumber;
+		
+	if (firstNumber < secondNumber)
+	{
+		cout << "\n" << firstNumber << " is less than " << secondNumber;
+	}
+	else if (secondNumber < firstNumber)
+	{
+		cout << "\n" << firstNumber << " is greater than " << secondNumber;
+	}
+	else
+	{
+		cout << "\n" << firstNumber << " is equal to " << secondNumber;
+	}
+
+	cout << "\n\nEnd of Program";
+	return 0;		
+}
