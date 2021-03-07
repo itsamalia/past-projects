@@ -1,0 +1,34 @@
+// This program calculates profits and sales prices for a furniture company.
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+string itemName = "TV Stand";
+double retailPrice = 345.00;
+double wholeSalePrice = 210.00;
+double salePercentage = .25;
+double salePrice = retailPrice - (retailPrice * salePercentage);
+double profit = retailPrice - wholeSalePrice;
+double saleProfit = salePrice - wholeSalePrice;
+
+int main()
+{
+
+  cout << "**This is a Profit Calculator**\n";
+
+  cout << "\nItem name is " << itemName << endl;
+
+  cout << "\n**Wholesale Price for " << itemName << " is $" << wholeSalePrice <<endl;
+
+  cout << "\n**Retail Price for " << itemName << " is $" << retailPrice << endl;
+
+  cout << "\n**Profit for " << itemName << " is $" << profit << endl;
+
+  cout << "\n**Sale Price for " << itemName << " is $" << salePrice << endl;
+
+  cout << "\n**Sale Profit for " << itemName << " is $" << saleProfit << endl;
+
+  cout << "\nThank you for doing business with us!";
+  return 0;
+}
