@@ -1,0 +1,16 @@
+print("\n~ ~ ~ ~ ~ ~ ~ ~ Trip Cost:  Gasoline  ~ ~ ~ ~ ~ ~ ~ ~")
+
+INCREASE = 0.10
+MILES_PER_GALLON = 20
+tripDest = str(input("\nEnter Trip Destination           : "))
+milesDriven = int(input("Enter the number of miles driven : "))
+	
+while (milesDriven > 0):
+	costPerGallon = float(input("Enter the current cost per gallon: $"))
+	tripCost = milesDriven/MILES_PER_GALLON*costPerGallon
+	print("\n\t**Cost of Trip Gasoline: $",round(tripCost,2),"**")
+	newTripCost = tripCost*(1+INCREASE)
+	print("* 10% Increase of Trip Gasoline: $",round(newTripCost,2),"**")
+	milesDriven = int(input("\nEnter the number of miles driven or 0 to end:"))
+		
+print("\nEnd of Program")
