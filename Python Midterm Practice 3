@@ -1,0 +1,22 @@
+# Midterm Practice 3 - While Loop
+print(" ~ ~ ~ ~ ~ ~ ~ Midterm Practice 3 ~ ~ ~ ~ ~ ~ ~ \n")
+
+print(" \tCurrent Tuition:   $15,000.00\n")
+
+print("  Year \t \tProjected Tuition")
+
+year = 1
+RATE = .04
+tuition = 15000.00
+
+for year in range (1, 6):
+
+	projectedTuition = tuition + (tuition * RATE)
+
+	print("  ", year, "\t \t ", '${:,.2f}'.format(projectedTuition))
+
+	# round(VARIABLE, 2)
+	
+	year = year + 1
+
+	tuition = projectedTuition
