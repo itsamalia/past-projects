@@ -1,0 +1,44 @@
+# Midterm Practice 4 - Decisions
+print("~ ~ ~ ~ ~ ~ ~ ~ ~ Midterm Practice 4 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~")
+	
+done = "Y"
+	
+while (done != "N"):
+	
+	orderPrice = float(input("\nHow much is your order?  $"))
+	
+	if ((orderPrice <= 19.99) and (orderPrice >= 0)):
+	
+		shipCost = 5.95
+	
+	elif ((orderPrice <= 49.99) and (orderPrice >= 20)):
+	
+		shipCost = 6.95
+	
+	elif ((orderPrice <= 74.99) and (orderPrice >= 50)):
+	
+		shipCost = 7.95
+	
+	elif ((orderPrice <= 1000) and (orderPrice >= 75)):
+	
+		shipCost = 0
+	
+	else:
+	
+		shipCost = 0
+	
+	total = orderPrice + shipCost
+	
+	if ((shipCost < 8 ) and (shipCost > 5)):
+	
+		print("Your shipping costs are:  ", '${:,.2f}'.format(shipCost),
+	 "    Total Order:  ", '${:,.2f}'.format(total))
+	
+	else:
+	
+		print("Your shipping costs are:  Free    Total Order:  ", 
+	'${:,.2f}'.format(total))
+	
+	done = str(input("\nDo you have another order? (Y / N)  "))
+	
+print("\nThank you for shopping at Games-R-Us")
