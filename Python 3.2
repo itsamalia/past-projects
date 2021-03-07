@@ -1,0 +1,31 @@
+# C3 Debug 2 - Program displays employee net pay values.   
+print("\n* * * * * * * * Fair-E Godmother Payroll * * * * * * * *")
+
+END = "end"
+
+employeeName = str(input("\nEnter Employee Name or 'end' to exit: "))
+while employeeName != END:
+	hoursworked = int(input("Enter Hours Worked: "))
+	hourrate = float(input("Enter Hourly Rate: "))
+
+	
+	print("\nWeekly Payroll for", employeeName)
+	gross = (hoursworked * hourrate)
+	
+	print("Gross Pay:", '${:,.2f}'.format(gross))
+	if gross > 45:
+		
+		DEDUCTION = 45
+		netPay = gross - DEDUCTION
+		print("Deduction:", '${:,.2f}'.format(DEDUCTION))
+		print("Net Pay  :", '${:,.2f}'.format(netPay))
+	else: 
+		
+		DEDUCTION = 0
+		netPay = gross - DEDUCTION
+		print("Deduction:", '${:,.2f}'.format(DEDUCTION))
+		print("Net Pay  :", '${:,.2f}'.format(netPay))
+	
+	employeeName = str(input("\nEnter Employee Name or 'end' to exit: "))
+	
+print("\nEnd of Program")
