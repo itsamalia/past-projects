@@ -1,0 +1,28 @@
+# Midterm EXAM - PART 1 - DEBUGGING
+
+print("♦ ♦ ♦ ♦ ♦ ♦ ♦ ♦ Midterm Exam - Part 1 ♦ ♦ ♦ ♦ ♦ ♦ ♦")
+
+CITY_TAX_RATE = .0835
+STATE_TAX_RATE = .0625
+line = '__________'*5
+
+again = 'Y'
+
+while (again  != 'N'):
+	
+	print(line)
+	price = float(input("\nEnter Product Price: $"))  
+      
+	totalStateTax = (price * STATE_TAX_RATE)
+	totalCityTax = (price * CITY_TAX_RATE)
+   
+	totalPrice = price + totalStateTax + totalCityTax
+   
+	print("\n\t     Price = ", '${:,.2f}'.format(price))
+	print("\t  City Tax =  ", '${:,.2f}'.format(totalCityTax))
+	print("\t State Tax =  ", '${:,.2f}'.format(totalStateTax))
+	print("\t     Total = ", '${:,.2f}'.format(totalPrice))
+   
+	again = input("\n Calculate another Price & Tax? (Y/N)")
+	
+print("\nPrice & Tax Calculator End")
