@@ -1,0 +1,34 @@
+print("~ ~ ~ ~ ~ ~ Midterm Exam Part 2 ~ ~ ~ ~ ~ ~\n")
+
+again = 'Y'
+	
+while (again  != 'N'):
+	courseName = str(input("Enter Course Name  :"))
+	grade1 = int(input("\nEnter Cycle 1 Grade:"))
+	grade2 = int(input("\nEnter Cycle 2 Grade:"))
+	grade3 = int(input("\nEnter Cycle 3 Grade:"))
+	midtermExam = int(input("\nEnter Midterm Exam:"))
+	
+	avg = (grade1 +grade2 + grade3) / 3 
+	cyclePoints = avg * 80 / 100
+	examPoints = midtermExam * 20 / 100
+	semesterGrade = cyclePoints + examPoints
+	
+	if  avg >= 90 and avg <=100: 
+		rGrade = 'A'
+	elif avg >= 80 and avg <= 89:
+		Grade = 'B'
+	elif avg >= 75 and avg <= 79: 
+		Grade = 'C'
+	elif avg >= 70 and avg <= 74: 
+		Grade = 'D'
+	else:
+		Grade = 'F'
+	
+	print("\n  ** Cycle Average:", round(avg), "\t\t", "** Cycle Points:",round(cyclePoints))
+	print("  ** Midterm Exam :",round(midtermExam), "\t\t", "** Exam Points:",round(examPoints))
+	print("\n\t ** SEMESTER 1 GRADE:",round(semesterGrade), "\t\t",Grade,"**")
+	
+	again = input("\n Calculate another course semester grade? (Y/N) ")
+
+print("\nEnd Semester Grade Calculation")
