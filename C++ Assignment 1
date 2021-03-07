@@ -1,0 +1,13 @@
+// Amalia Talijancic
+// Assignment #2
+// 01/23/2021
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+cout << "Name: Amalia Talijancic \n\nAddress: 9629 Fountain Bend, San Antonio, TX, 78250 \n\nPhone Number: (210) 708-8169 \n\nCollege Major: Computer Science \n\nEnd of Program";
+
+return 0;
+}
