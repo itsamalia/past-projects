@@ -1,0 +1,22 @@
+# C3 Debug 1 - Test Averages vers. 2
+print("\n * * * * * * * * Test Average Calculator * * * * * * * *")
+
+END = "end"
+studentName = str(input("\nEnter student name or 'end' to exit: "))
+
+while studentName != END:
+	testScore1 = float(input("Enter test score 1: "))
+	testScore2 = float(input("Enter test score 2: "))
+	testScore3 = float(input("Enter test score 3: "))
+	
+	
+	avg = (testScore1 + testScore2 + testScore3) // 3
+	
+	if avg >= 70:
+		print("\n*", studentName, "Average is:", (round(avg,0)), " Pass  *")
+	else:
+		print("\n*", studentName, "Average is:", (round(avg,0)), " Fail  *")
+		
+	studentName = str(input("\nEnter student name or 'end' to exit: "))
+	
+print("\nEnd of Program")
