@@ -1,0 +1,22 @@
+# Midterm Practice 5 - Debug Trip Cost
+
+print("\n ~ ~ ~ ~ ~ ~ ~ Midterm Practice 5 ~ ~ ~ ~ ~ ~ ~")
+
+milesDriven = int(input("\nEnter the number of miles driven: " ))
+INCREASE = 0.10
+MILES_PER_GALLON = 32
+QUIT = 0
+	
+while (milesDriven  !=  QUIT):
+
+	costPerGallon= float(input("Enter the current cost per gallon: "))
+
+	tripCost =  (milesDriven / MILES_PER_GALLON)  * costPerGallon	
+	newTripCost = tripCost + (tripCost * INCREASE)
+	
+	print("\n Current Cost of Trip : ", '${:,.2f}'.format(tripCost))
+	print("\n Increased Cost of Trip: ", '${:,.2f}'.format(newTripCost))
+
+	milesDriven = int(input("\nEnter Trip Miles Driven or ‘0’ to Quit: " ))
+	
+print("\nHave a Safe Trip")
