@@ -1,0 +1,29 @@
+// Amalia Talijancic
+// Assignment #3
+// 01/23/2021
+
+#include <iostream>
+
+using namespace std;
+
+int milesPerGallon;
+int milesMax;
+int gasCapacity;
+
+int main()
+{
+	cout << "Miles Per Gallon\n\n";
+	
+	cout << "Enter the number of gallons of gas your car can hold: ";
+	cin >> gasCapacity;
+
+	cout << "Enter the number of miles it can be driven on a full tank: ";
+	cin >> milesMax;
+
+	milesPerGallon = (gasCapacity/milesMax);
+
+	cout << "\nMiles per gallon is: " << milesPerGallon;
+	
+	cout << "\n\nEnd of Program";
+	return 0;
+}
