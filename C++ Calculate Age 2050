@@ -1,0 +1,24 @@
+// This Program calculates your age in the year 2050
+// Input: None
+// Output: Your name, your current age, and your age in 2050
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int myNewAge;
+int myCurrentAge = 18;
+const string myName = "Amalia";
+int currentYear = 2021;
+
+
+int main()
+{
+
+  myNewAge = myCurrentAge + (2050 - currentYear);
+
+  cout << "My name is " << myName << " and I will be " << myNewAge << " in the year 2050." << endl; 
+  return 0;
+
+
+}
