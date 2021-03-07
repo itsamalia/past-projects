@@ -1,0 +1,31 @@
+# Midterm Practice 6 - Debug 2 Profit Index
+
+print("\n ~ ~ ~ ~ ~ ~ ~ Midterm Practice 6 ~ ~ ~ ~ ~ ~ ~")
+
+again = 'Y'
+	
+while (again  != 'N'):
+	name = str(input("\nEnter Company Name     : "))
+	qtr1 = int(input("Enter Quarter 1 Profit : $ "))
+	qtr2 = int(input("Enter Quarter 2 Profit : $ ")) 
+	qtr3 = int(input("Enter Quarter 3 Profit : $ "))
+	qtr4 = int(input("Enter Quarter 4 Profit : $ "))
+
+	average = (qtr1 + qtr2 + qtr3 + qtr4) / 4
+	
+	if  average >= 100000: 
+		profitIndex = 'Superior'
+	elif average >= 60000 and average <= 99999:
+		profitIndex = 'Excellent'
+	elif average >= 20000 and average <= 59999: 
+		profitIndex = 'Average'
+	else:
+		profitIndex = 'Poor'
+	
+	print("\n\t** Profit Average: ", '${:,.2f}'.format(average))
+	print("\t** Profit Index: ", profitIndex)
+
+	again = input("\n Calculate another Company Profit Index? (Y/N) ")
+	
+print("\nEnd Profit Index Calculation")
+	
