@@ -1,0 +1,13 @@
+print("\n- - - -  Monthly Cost of Home Ownership  - - - - ")
+mortgagePayment= int(input("\nEnter mortgage payment or 0 to end : $ "))
+while (mortgagePayment > 0):
+  utilities= int(input("Enter amount for utilities : $ "))
+  taxes= int(input("Enter amount for taxes : $ "))
+  upkeep= int(input("Enter amount for upkeep : $ "))
+  
+  monthlyTotal= mortgagePayment + utilities + taxes + upkeep
+  print("\n * * * * * Monthly Total is: $ " + str(round(monthlyTotal, 2)) + " * * * * *\n")
+  
+  mortgagePayment= int(input("Enter mortgage payment or 0 to end : $ "))
+
+  print("\nEnd of Cost of Home Ownership")
