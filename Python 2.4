@@ -1,0 +1,10 @@
+print("\n* * * * * *  Cheap $2 Products * * * * * *")
+prodName = str(input("\nEnter Product Name : "))
+PRICE_EACH = 2
+
+while (prodName !="xxx"):
+  quantity = int(input("\nEnter Quantity Ordered : "))
+  total = quantity * PRICE_EACH
+  print("\nProduct Name:", prodName, "Total : $ ", total)
+  prodName = str(input("\nEnter Product Name or 'xxx' to end:"))
+print("\nEnd of program")
