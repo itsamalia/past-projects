@@ -1,0 +1,48 @@
+// Amalia Talijancic
+// Assignment #4
+// 02/08/2021
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+double firstTestScore;
+double secondTestScore;
+double thirdTestScore;
+double fourthTestScore;
+double fifthTestScore;
+double testScoreAverage;
+string firstName;
+
+int main()
+{
+	cout << "Calculate Your Test Score Average\n\n";
+	
+  cout << "Enter your name: ";
+	cin >> firstName;
+	
+  cout << "Enter your first test score to be calculated: ";
+	cin >> firstTestScore;
+
+	cout << "Enter your second test score to be calculated: ";
+	cin >> secondTestScore;
+
+  cout << "Enter your third test score to be calculated: ";
+  cin >> thirdTestScore; 
+  
+  cout << "Enter your fourth test score to be calculated: ";
+  cin >> fourthTestScore; 
+  
+  cout << "Enter your fifth test score to be calculated: ";
+  cin >> fifthTestScore;
+
+	testScoreAverage = (firstTestScore + secondTestScore + thirdTestScore + fourthTestScore + fifthTestScore) / 5;
+  cout << fixed << setprecision(1);
+
+	cout << "\nTest Score Average for " << firstName << " is: " << testScoreAverage;
+	
+	cout << "\n\nEnd of Program";
+	return 0;
+}
