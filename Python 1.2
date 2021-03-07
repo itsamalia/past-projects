@@ -1,0 +1,16 @@
+# This program accepts a user's monthly pay and rent, utilities 
+# and grocery bills – and displays the amount available for 
+# discretionary spending (which might be negative)
+
+print("~ ~ ~ ~ ~ ~ Monthly Budget ~ ~ ~ ~ ~ ~ ~\n")
+
+Pay       = int(input("Enter your Pay  : $"))
+rent      = int(input("Enter your Monthly Rent     : $"))
+utilities = int(input("Enter your Monthly Utilities: $"))
+groceries = int(input("Enter your Monthly Groceries: $"))
+Pay = Pay
+print("\nPay : $ ", Pay)
+Expenses = rent + utilities + groceries
+print("\nExpenses : $ ", Expenses)
+discretionary = Pay - rent - utilities - groceries
+print("\nDiscretionary Money :  $ ", discretionary)
