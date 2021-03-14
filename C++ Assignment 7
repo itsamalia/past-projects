@@ -1,0 +1,57 @@
+// Amalia Talijancic
+// Assignment #7
+// 03/12/2021
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string student;
+    string firstName;
+    string lastName;
+    int numberStudents; 
+     
+    cout << "\nA7 – Student Line Up 👩‍🏫";
+
+    cout << "\n\nPlease enter the number of students in your class: ";
+    cin >> numberStudents;
+
+    while (numberStudents < 1 || numberStudents > 25)
+        {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Please be sure to enter a number between 1 and 25: ";
+            cin >> numberStudents;
+        }
+    
+    cout << "\n\nPlease enter the first student's name: ";
+    cin >> student;
+
+    firstName = lastName = student;
+
+    for (int i = 1; i < numberStudents; i++)
+    {
+        cout << "\nPlease enter the name of student "
+        << (i + 1) << " here: ";
+        cin >> student;
+
+        if (student < firstName)
+            firstName = student;
+
+        if (student > lastName)
+            lastName = student;
+    }
+
+    cout << "\n\nThe first recorded student in line is " 
+         << firstName << ".";
+
+    cout << "\n\nThe last recorded student in line is " 
+         << lastName << ".";
+
+    cout << "\n\nHave a nice class today! ✏️";
+
+return 0;
+}
