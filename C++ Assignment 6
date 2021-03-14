@@ -1,0 +1,70 @@
+// Amalia Talijancic
+// Assignment #6
+// 03/11/2021
+
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+const double RETAIL = 99.00;
+int quantityOrdered;
+int costBeforeDiscount;
+int costAfterDiscount;
+
+int main()
+{
+	cout << "A6 - Software Sales 💻";
+	
+	cout << "\n\nPlease enter quantity ordered: ";
+	cin  >> quantityOrdered;
+
+	//costBeforeDiscount
+    costBeforeDiscount = quantityOrdered * RETAIL ;
+	
+	//calculations
+	if (quantityOrdered >= 1 && quantityOrdered <= 9)
+	{
+	//Failed eligibility
+		cout << "\nI'm sorry, but your order is not eligible for a discount. The price is: $ " << costBeforeDiscount;
+	}
+
+	else if (quantityOrdered >= 10 && quantityOrdered <= 19)
+	{
+		//calculate 20% discount
+		costAfterDiscount = costBeforeDiscount - (costBeforeDiscount * .20);
+		cout << "\nBefore applying the 20% discount, the price was: $ " << costBeforeDiscount;
+		cout << "\n\nThe price for " << quantityOrdered << " items after applying the discount is: $ " << costAfterDiscount;
+	}
+
+	else if (quantityOrdered >= 20 && quantityOrdered <= 49)
+	{
+		//calculate 30% discount
+		costAfterDiscount = costBeforeDiscount - (costBeforeDiscount * .30);
+		cout << "\nBefore applying the 30% discount, the price was: $ " << costBeforeDiscount;
+		cout << "\n\nThe price for " << quantityOrdered << " items after applying the discount is: $ " << costAfterDiscount;
+	}
+
+	else if (quantityOrdered >= 50 && quantityOrdered <= 99)
+	{
+		//calculate 40% discount
+		costAfterDiscount = costBeforeDiscount - (costBeforeDiscount * .40);
+		cout << "\nBefore applying the 40% discount, the price was: $ " << costBeforeDiscount;
+		cout << "\n\nThe price for " << quantityOrdered << " items after applying the discount is: $ " << costAfterDiscount;
+	}
+
+	else if (quantityOrdered >= 100)
+	{
+		//calculate 50% discount
+		costAfterDiscount = costBeforeDiscount - (costBeforeDiscount * .50);
+		cout << "\nBefore applying the 50% discount, the price was: $ " << costBeforeDiscount;
+		cout << "\n\nThe price for " << quantityOrdered << " items after applying the discount is: $ " << costAfterDiscount;
+	}
+
+	else
+		cout << "\nPlease enter a number greater than 0.";
+
+	cout << "\n\nThank you for shopping with us and have a nice day! 😊";
+	return 0;		
+}
